@@ -1,0 +1,101 @@
+ext {
+
+    android = [
+            compileSdkVersion: 28,
+            buildToolsVersion: "28.0.3",
+            minSdkVersion    : 21,
+            targetSdkVersion : 28,
+            versionCode      : 1,
+            versionName      : "1.0.0",
+    ]
+
+    version = [
+            androidSupportSdkVersion: "1.0.2",
+            retrofitSdkVersion      : "2.4.0",
+            dagger2SdkVersion       : "2.23.2",
+            glideSdkVersion         : "4.8.0",
+            butterknifeSdkVersion   : "9.0.0",
+            rxlifecycleSdkVersion   : "1.0",
+            rxlifecycle2SdkVersion  : "2.2.2",
+            canarySdkVersion        : "1.6.3"
+    ]
+    dependencies = [
+            //support
+            "appcompatX"               : "androidx.appcompat:appcompat:${version["androidSupportSdkVersion"]}",
+            "annotations"              : 'androidx.annotation:annotation:1.0.0',
+            "recyclerview"             : "androidx.recyclerview:${version["androidSupportSdkVersion"]}",
+
+            //network
+            "retrofit"                 : "com.squareup.retrofit2:retrofit:${version["retrofitSdkVersion"]}",
+            "retrofit_converter_gson"  : "com.squareup.retrofit2:converter-gson:${version["retrofitSdkVersion"]}",
+            "retrofit_adapter_rxjava"  : "com.squareup.retrofit2:adapter-rxjava:${version["retrofitSdkVersion"]}",
+            "retrofit_adapter_rxjava2" : "com.squareup.retrofit2:adapter-rxjava2:${version["retrofitSdkVersion"]}",
+            "okhttp3"                  : "com.squareup.okhttp3:okhttp:3.11.0",
+            "okhttp_urlconnection"     : "com.squareup.okhttp:okhttp-urlconnection:2.0.0",
+            "glide"                    : "com.github.bumptech.glide:glide:${version["glideSdkVersion"]}",
+            "glide_compiler"           : "com.github.bumptech.glide:compiler:${version["glideSdkVersion"]}",
+            "glide_loader_okhttp3"     : "com.github.bumptech.glide:okhttp3-integration:${version["glideSdkVersion"]}",
+
+            //view
+            "butterknife"              : "com.jakewharton:butterknife:${version["butterknifeSdkVersion"]}",
+            "butterknife_compiler"     : "com.jakewharton:butterknife-compiler:${version["butterknifeSdkVersion"]}",
+
+            //rx2
+            "rxandroid2"               : "io.reactivex.rxjava2:rxandroid:2.1.1",
+            "rxjava2"                  : "io.reactivex.rxjava2:rxjava:2.2.9",
+            "rxlifecycle2"             : "com.trello.rxlifecycle2:rxlifecycle:${version["rxlifecycle2SdkVersion"]}",
+            "rxlifecycle2_android"     : "com.trello.rxlifecycle2:rxlifecycle-android:${version["rxlifecycle2SdkVersion"]}",
+            "rxlifecycle2_components"  : "com.trello.rxlifecycle2:rxlifecycle-components:${version["rxlifecycle2SdkVersion"]}",
+
+            //tools
+            "dagger2"                  : "com.google.dagger:dagger:${version["dagger2SdkVersion"]}",
+            "dagger2_android"          : "com.google.dagger:dagger-android:${version["dagger2SdkVersion"]}",
+            //已经不使用android support libraries，所以这里不使用com.google.dagger:dagger-android-support了
+            //"dagger2_android_support"  : "com.google.dagger:dagger-android-support:${version["dagger2SdkVersion"]}",
+            "dagger2_compiler"         : "com.google.dagger:dagger-compiler:${version["dagger2SdkVersion"]}",
+            "dagger2_android_processor": "com.google.dagger:dagger-android-processor:${version["dagger2SdkVersion"]}",
+            "gson"                     : "com.google.code.gson:gson:2.8.5",
+            "multidex"                 : "androidx.multidex:multidex:2.0.0",
+            "javax.annotation"         : "javax.annotation:jsr250-api:1.0",
+            "arouter"                  : "com.alibaba:arouter-api:1.3.1",
+            "arouter_compiler"         : "com.alibaba:arouter-compiler:1.1.4",
+
+            //test
+            "junit"                    : "junit:junit:4.12",
+            "androidJUnitRunner"       : "androidx.test.runner.AndroidJUnitRunner",
+            "runner"                   : "androidx.test:runner:1.1.0",
+            "espresso_core"            : "androidx.test.espresso:espresso-core:3.1.0",
+            "espresso_contrib"         : "androidx.test.espresso:espresso-contrib:3.1.0",
+            "espresso_intents"         : "androidx.test.espresso:espresso-intents:3.1.0",
+            "mockito_core"             : "org.mockito:mockito-core:1.+",
+            "leakcanary_debug_fragment": "com.squareup.leakcanary:leakcanary-support-fragment:${version["canarySdkVersion"]}",
+            "leakcanary_debug"         : "com.squareup.leakcanary:leakcanary-android:${version["canarySdkVersion"]}",
+            "leakcanary_release"       : "com.squareup.leakcanary:leakcanary-android-no-op:${version["canarySdkVersion"]}",
+            "umeng_analytics"          : "com.umeng.analytics:analytics:6.0.1",
+
+            //royole lib
+            "royole_utils"             : "com.royole.app:common-util-android:1.0.0",
+            "royole_permission"        : "com.royole.service.permission:common-service-permission:1.1",
+            "royole_bluetooth"         : "com.royole.app:ryblutetooth:1.1",
+            "royole_log"               : "com.royole.app:commonlog:1.0.2",
+            "royole_mvp_base"          : "com.royole.app:mvp-base:1.1.8",
+
+            //android jetpack
+            "android_extensions"       : "androidx.lifecycle:lifecycle-extensions:2.0.0",
+
+            //room
+            "room_runtime"             : "androidx.room:room-runtime:2.1.0-alpha04",
+            "room_compiler"            : "androidx.room:room-compiler:2.1.0-alpha04",
+            "room_rxjava2"             : "androidx.room:room-rxjava2:2.1.0-alpha04",
+            "room_guava"               : "com.google.guava:guava:27.0.1-android",
+
+
+            //debug
+            "stetho"                   : "com.facebook.stetho:stetho:1.4.1",
+            "stetho_okhttp"            : "com.facebook.stetho:stetho-okhttp3:1.4.1",
+
+            //autosize
+            "android_autosize"         : "me.jessyan:autosize:1.1.2"
+    ]
+
+}
