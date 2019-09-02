@@ -3,6 +3,7 @@
     package="com.urt1rs.donkeywiki">
 
     <application
+        android:name=".DonkeyWikiApplication"
         android:allowBackup="true"
         android:icon="@mipmap/app_icon"
         android:label="@string/app_name"

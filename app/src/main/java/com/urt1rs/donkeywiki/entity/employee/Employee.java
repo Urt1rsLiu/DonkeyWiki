@@ -6,13 +6,19 @@ import java.util.List;
  * @author Hongzhi.Liu
  * @date 2019/8/23
  */
-public class Person {
+public class Employee {
 
     private String name;
     private int attack;
     private int defend;
     private int block;
     private List<String> tags;
+    private String type;
+
+    public Employee() {
+
+    }
+
 
 
 }
