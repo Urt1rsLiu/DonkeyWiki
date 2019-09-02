@@ -6,6 +6,13 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowShowWallpaper">false</item>
+        <item name="android:windowBackground">@android:color/white</item>
+    </style>
+
+    <style name="Tag" parent="TextAppearance.AppCompat">
+        <item name="android:textColor">@color/selector_tag_bg</item>
+        <item name="android:background">@drawable/shape_tag</item>
     </style>
 
 </resources>

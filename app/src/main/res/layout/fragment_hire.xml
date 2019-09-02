@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="top|center_horizontal"
+    android:background="@color/background_gray"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="干员招募"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/x50" />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_search_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:paddingStart="@dimen/x10"
+        android:paddingTop="@dimen/x10"
+        android:paddingEnd="@dimen/x10"
+        android:paddingBottom="@dimen/x10">
+
+        <androidx.appcompat.widget.SearchView
+            android:layout_width="@dimen/x820"
+            android:layout_height="@dimen/x80"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:tooltipText="请输入要搜索的干员"
+            app:queryBackground="@drawable/shape_query"
+            app:queryHint="请输入要搜索的干员" />
+
+
+        <TextView
+            android:id="@+id/tv_search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/x30"
+            android:layout_toStartOf="@+id/tv_filter"
+            android:gravity="center"
+            android:text="搜索"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/x32" />
+
+        <TextView
+            android:id="@+id/tv_filter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/x30"
+            android:gravity="center"
+            android:text="招募"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/x32" />
+
+
+    </RelativeLayout>
+
+
+</LinearLayout>

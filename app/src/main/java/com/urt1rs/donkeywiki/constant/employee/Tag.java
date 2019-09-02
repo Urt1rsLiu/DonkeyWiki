@@ -1,10 +1,12 @@
-package com.urt1rs.donkeywiki.constant;
+package com.urt1rs.donkeywiki.constant.employee;
 
 /**
  * @author Hongzhi.Liu
  * @date 2019/8/23
  */
 public interface Tag {
+
+    int count = 29;
 
     String REMOTE_ATTACK = "远程位";
     String NEARBY_ATTACK = "近战位";
@@ -38,6 +40,9 @@ public interface Tag {
     String ROOKIE = "新手";
     String SENIOR = "资深";
     String SUPER_SENIOR = "高级资深";
+
+    String MALE = "男性干员";
+    String FEMALE = "女性干员";
 
 
 }

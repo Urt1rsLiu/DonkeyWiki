@@ -11,10 +11,11 @@ ext {
 
     version = [
             androidSupportSdkVersion: "1.0.2",
+            recyclerviewVersion     : "1.0.0",
             retrofitSdkVersion      : "2.4.0",
             dagger2SdkVersion       : "2.23.2",
             glideSdkVersion         : "4.8.0",
-            butterknifeSdkVersion   : "9.0.0",
+            butterknifeSdkVersion   : "10.0.0",
             rxlifecycleSdkVersion   : "1.0",
             rxlifecycle2SdkVersion  : "2.2.2",
             canarySdkVersion        : "1.6.3"
@@ -23,7 +24,7 @@ ext {
             //support
             "appcompatX"               : "androidx.appcompat:appcompat:${version["androidSupportSdkVersion"]}",
             "annotations"              : 'androidx.annotation:annotation:1.0.0',
-            "recyclerview"             : "androidx.recyclerview:${version["androidSupportSdkVersion"]}",
+            "recyclerview"             : "androidx.recyclerview:recyclerview:${version["recyclerviewVersion"]}",
 
             //network
             "retrofit"                 : "com.squareup.retrofit2:retrofit:${version["retrofitSdkVersion"]}",
