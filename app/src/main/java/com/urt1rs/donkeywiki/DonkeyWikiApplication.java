@@ -8,7 +8,9 @@ public class DonkeyWikiApplication extends Application {
 
     private static Context mContext;
 
-    protected void onCreate(Bundle bundle) {
+    @Override
+    public void onCreate() {
+        super.onCreate();
         mContext = getApplicationContext();
     }
 

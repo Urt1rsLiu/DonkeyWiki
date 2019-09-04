@@ -34,7 +34,7 @@
         android:paddingBottom="@dimen/x10">
 
         <androidx.appcompat.widget.SearchView
-            android:layout_width="@dimen/x820"
+            android:layout_width="@dimen/x720"
             android:layout_height="@dimen/x80"
             android:layout_alignParentStart="true"
             android:layout_centerVertical="true"
@@ -48,12 +48,12 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
-            android:layout_marginEnd="@dimen/x30"
+            android:layout_marginEnd="@dimen/x50"
             android:layout_toStartOf="@+id/tv_filter"
             android:gravity="center"
             android:text="搜索"
             android:textColor="@android:color/white"
-            android:textSize="@dimen/x32" />
+            android:textSize="@dimen/x40" />
 
         <TextView
             android:id="@+id/tv_filter"
@@ -65,7 +65,7 @@
             android:gravity="center"
             android:text="招募"
             android:textColor="@android:color/white"
-            android:textSize="@dimen/x32" />
+            android:textSize="@dimen/x40" />
 
 
     </RelativeLayout>

@@ -35,6 +35,7 @@ public class HireFragment extends Fragment {
         super.onCreate(bundle);
     }
 
+    @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
         View content = inflater.inflate(R.layout.fragment_hire, container, false);

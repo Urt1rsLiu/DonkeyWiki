@@ -11,6 +11,13 @@ public interface Tag {
     String REMOTE_ATTACK = "远程位";
     String NEARBY_ATTACK = "近战位";
 
+    String ROOKIE = "新手";
+    String SENIOR = "资深";
+    String SUPER_SENIOR = "高级资深";
+
+    String MALE = "男性干员";
+    String FEMALE = "女性干员";
+
     String ADC = "狙击干员";
     String APC = "术士干员";
     String PIONEER = "先锋干员";
@@ -35,14 +42,4 @@ public interface Tag {
     String CALL = "召唤";
     String REVIVAL = "快速复活";
     String COST_RESTORE = "费用回复";
-
-
-    String ROOKIE = "新手";
-    String SENIOR = "资深";
-    String SUPER_SENIOR = "高级资深";
-
-    String MALE = "男性干员";
-    String FEMALE = "女性干员";
-
-
 }

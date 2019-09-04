@@ -4,5 +4,5 @@
     <solid android:color="@color/selector_tag_bg" />
     <stroke
         android:width="@dimen/x2"
-        android:color="@android:color/black" />
+        android:color="@color/selector_tag_border" />
 </shape>
