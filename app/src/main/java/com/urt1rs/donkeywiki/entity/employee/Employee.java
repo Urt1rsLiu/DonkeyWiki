@@ -1,7 +1,5 @@
 package com.urt1rs.donkeywiki.entity.employee;
 
-import android.graphics.Bitmap;
-
 import com.urt1rs.donkeywiki.constant.employee.Position;
 
 import java.util.List;
@@ -32,13 +30,22 @@ public class Employee {
      * 定位
      */
     protected Position position;
-    /**
-     * 头像
-     */
-    protected Bitmap avatar;
 
     public Employee() {
 
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (!(o instanceof Employee)) {
+            return false;
+        }
+        return name.equals(((Employee) o).name);
+    }
+
+    @Override
+    public int hashCode() {
+        return name.hashCode();
     }
 
 

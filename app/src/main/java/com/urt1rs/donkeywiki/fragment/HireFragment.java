@@ -2,6 +2,7 @@ package com.urt1rs.donkeywiki.fragment;
 
 import android.os.Bundle;
 import android.util.Log;
+import android.util.SparseArray;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,9 +13,10 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import com.urt1rs.donkeywiki.R;
+import com.urt1rs.donkeywiki.entity.employee.Employee;
 import com.urt1rs.donkeywiki.widget.FilterPopupWindow;
 
-import java.util.List;
+import java.util.Set;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -23,11 +25,12 @@ import butterknife.OnClick;
 public class HireFragment extends Fragment {
 
     @BindView(R.id.rl_search_bar)
-    public RelativeLayout rl_bar;
+    public RelativeLayout rlBar;
 
     private FilterPopupWindow mFilterWindow;
 
-    private List<String> tags;
+
+    private SparseArray<Set<Employee>> mEmployees;
 
 
     @Override
@@ -53,9 +56,12 @@ public class HireFragment extends Fragment {
                 View filterView = LayoutInflater.from(this.getContext()).inflate(R.layout.popup_filter, null, false);
                 mFilterWindow = new FilterPopupWindow(HireFragment.this.getActivity(), filterView,
                         ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT, true);
+                mFilterWindow.setOnClickOk(tags -> {
+
+                });
 
             }
-            mFilterWindow.showAsDropDown(rl_bar);
+            mFilterWindow.showAsDropDown(rlBar);
         }
     }
 

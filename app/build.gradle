@@ -1,4 +1,6 @@
 apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-android'
 
 
 def config = rootProject.ext.android
@@ -35,4 +37,9 @@ dependencies {
     implementation library.butterknife
     implementation library.recyclerview
     annotationProcessor library.butterknife_compiler
+    implementation "androidx.core:core-ktx:+"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+}
+repositories {
+    mavenCentral()
 }

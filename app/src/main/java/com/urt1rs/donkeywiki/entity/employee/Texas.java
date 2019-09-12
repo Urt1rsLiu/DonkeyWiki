@@ -11,10 +11,25 @@ import java.util.ArrayList;
  */
 public class Texas extends Employee {
 
-    public Texas() {
+    private static Texas instance;
+
+    private Texas() {
         position = Position.PIONEER;
         tags = new ArrayList<>(5);
         tags.add(Tag.COST_RESTORE);
     }
+
+    private static Texas getInstance() {
+        if (null == instance) {
+            synchronized (Texas.class) {
+                if (null == instance) {
+                    instance = new Texas();
+                }
+            }
+        }
+        return instance;
+    }
+
+
 
 }

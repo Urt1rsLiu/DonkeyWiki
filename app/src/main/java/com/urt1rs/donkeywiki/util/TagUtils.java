@@ -3,6 +3,7 @@ package com.urt1rs.donkeywiki.util;
 import android.util.SparseArray;
 
 import com.urt1rs.donkeywiki.constant.employee.Tag;
+import com.urt1rs.donkeywiki.entity.employee.Employee;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -57,16 +58,17 @@ public class TagUtils {
 
 
     /**
-     * 获取满足所有tag的干员
+     * 获取任意满足tag的干员, 并按星级排序
      * @param tags
      * @return
      */
-    public static SparseArray<Set<String>> sortEmployeeByTag(List<String> tags) {
+    public static SparseArray<Set<Employee>> sortEmployeeByTag(List<String> tags) {
+        SparseArray<Set<Employee>> employees = EmployeeUtils.getAllEmployee();
         SparseArray result = new SparseArray();
         if (null == tags) {
             return result;
         }
-
+        // TODO: 2019/9/12 先筛选出含至少一个tag的干员
 
         return result;
 

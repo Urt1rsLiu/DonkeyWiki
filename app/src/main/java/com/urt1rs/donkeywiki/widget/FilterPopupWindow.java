@@ -19,6 +19,7 @@ import com.urt1rs.donkeywiki.R;
 import com.urt1rs.donkeywiki.constant.employee.Tag;
 import com.urt1rs.donkeywiki.util.TagUtils;
 
+import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
@@ -70,8 +71,26 @@ public class FilterPopupWindow extends PopupWindow {
 
     @OnClick(R.id.tv_ok)
     public void onClickFilterOk() {
-
+        dismiss();
+        if (null != mOnClickOk) {
+            mOnClickOk.onClickFilerOk(mAdapter.getSelectTags());
+        }
     }
+
+    private OnClickOkListener mOnClickOk;
+
+    public void setOnClickOk(OnClickOkListener onClickOk) {
+        mOnClickOk = onClickOk;
+    }
+
+    public interface OnClickOkListener {
+        /**
+         * 点击确定后回调
+         * @param tags
+         */
+        void onClickFilerOk(List<String> tags);
+    }
+
 
     @OnClick(R.id.tv_reverse_tags)
     public void onClickReverse() {
@@ -172,6 +191,14 @@ public class FilterPopupWindow extends PopupWindow {
                 int key = mSelectTags.remove();
                 notifyItemChanged(key);
             }
+        }
+
+        private List<String> getSelectTags() {
+            List<String> tags = new ArrayList<>(mSelectTags.size());
+            for (Integer i: mSelectTags) {
+                tags.add(tags.get(i));
+            }
+            return tags;
         }
     }
 
