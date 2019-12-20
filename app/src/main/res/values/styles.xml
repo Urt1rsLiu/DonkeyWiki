@@ -17,4 +17,9 @@
         <item name="android:textSize">@dimen/x36</item>
     </style>
 
+    <style name="Popup" parent="android:Animation">
+        <item name="android:windowEnterAnimation">@anim/popup_show</item>
+        <item name="android:windowExitAnimation">@anim/popup_dismiss</item>
+    </style>
+
 </resources>

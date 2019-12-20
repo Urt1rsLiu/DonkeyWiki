@@ -53,6 +53,7 @@ public class FilterPopupWindow extends PopupWindow {
         mTagList.setLayoutManager(new GridLayoutManager(mActivity, TagListAdapter.COLUMN_COUNT));
         mTagList.setAdapter(mAdapter);
         mTagList.addItemDecoration(new TagItemDecoration());
+        setAnimationStyle(R.style.Popup);
     }
 
     public void destroy() {
@@ -86,7 +87,7 @@ public class FilterPopupWindow extends PopupWindow {
     public interface OnClickOkListener {
         /**
          * 点击确定后回调
-         * @param tags
+         * @param tags tag
          */
         void onClickFilerOk(List<String> tags);
     }
