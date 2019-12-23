@@ -1,6 +1,6 @@
-package com.urt1rs.donkeywiki.constant.employee;
+package com.urt1rs.donkeywiki.constant.employee
 
-public enum Position {
+enum class Position {
 
     THERAPY,
     PIONEER,
@@ -9,6 +9,6 @@ public enum Position {
     APC,
     SHIELD,
     GUARD,
-    SPECIAL;
+    SPECIAL
 
 }
