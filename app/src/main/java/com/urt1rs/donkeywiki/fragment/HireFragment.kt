@@ -38,7 +38,6 @@ class HireFragment : Fragment() {
 
     @OnClick(R.id.tv_filter)
     public fun onClickFilter() {
-        Log.e(javaClass.simpleName, "click filter")
         if (null != mFilterWindow && mFilterWindow!!.isShowing) {
             mFilterWindow!!.dismiss()
         } else {
@@ -47,7 +46,7 @@ class HireFragment : Fragment() {
                 mFilterWindow = FilterPopupWindow(activity!!, filterView,
                         ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT, true)
                 mFilterWindow!!.setOnClickOk(object : FilterPopupWindow.OnClickOkListener {
-                    override fun onClickFilerOk(tags: MutableList<String>) {
+                    override fun onClickFilterOk(tags: MutableList<String>) {
 
                     }
                 })

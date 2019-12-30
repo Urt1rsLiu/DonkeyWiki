@@ -1,12 +1,10 @@
 package com.urt1rs.donkeywiki.widget
 
 import android.app.Activity
-import android.content.Context
 import android.graphics.Rect
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.view.WindowManager
 import android.widget.PopupWindow
 import android.widget.TextView
 import androidx.recyclerview.widget.GridLayoutManager
@@ -45,7 +43,6 @@ class FilterPopupWindow(private var mActivity: Activity, contentView: View, widt
         mTagList!!.layoutManager = GridLayoutManager(mActivity, COLUMN_COUNT)
         mTagList!!.adapter = mAdapter
         mTagList!!.addItemDecoration(TagItemDecoration())
-        animationStyle = R.style.Popup
     }
 
 
@@ -59,10 +56,10 @@ class FilterPopupWindow(private var mActivity: Activity, contentView: View, widt
     }
 
     @OnClick(R.id.tv_ok)
-    public fun onClickFilterOk() {
+    fun onClickFilterOk() {
         dismiss()
         if (null != mOnClickOk) {
-            mOnClickOk!!.onClickFilerOk(mAdapter.selectTags)
+            mOnClickOk!!.onClickFilterOk(mAdapter.selectTags)
         }
     }
 
@@ -75,7 +72,7 @@ class FilterPopupWindow(private var mActivity: Activity, contentView: View, widt
          * 点击确定后回调
          * @param tags tag
          */
-        fun onClickFilerOk(tags: MutableList<String>)
+        fun onClickFilterOk(tags: MutableList<String>)
     }
 
 
