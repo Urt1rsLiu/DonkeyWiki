@@ -43,6 +43,7 @@ class FilterPopupWindow(private var mActivity: Activity, contentView: View, widt
         mTagList!!.layoutManager = GridLayoutManager(mActivity, COLUMN_COUNT)
         mTagList!!.adapter = mAdapter
         mTagList!!.addItemDecoration(TagItemDecoration())
+        animationStyle = R.style.Popup
     }
 
 
@@ -81,7 +82,7 @@ class FilterPopupWindow(private var mActivity: Activity, contentView: View, widt
         mAdapter.clear()
     }
 
-    private inner class TagListAdapter() : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
+    private inner class TagListAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
         private val tags = TagUtils.allTags
 
@@ -177,9 +178,9 @@ class FilterPopupWindow(private var mActivity: Activity, contentView: View, widt
     inner class TagItemDecoration : RecyclerView.ItemDecoration() {
 
         override fun getItemOffsets(outRect: Rect, view: View, parent: RecyclerView, state: RecyclerView.State) {
-            outRect.bottom = DonkeyWikiApplication.appContext!!.resources.getDimensionPixelOffset(R.dimen.x15)
+            outRect.bottom = DonkeyWikiApplication.appContext.resources.getDimensionPixelOffset(R.dimen.x15)
             outRect.top = outRect.bottom
-            outRect.left = DonkeyWikiApplication.appContext!!.resources.getDimensionPixelOffset(R.dimen.x30)
+            outRect.left = DonkeyWikiApplication.appContext.resources.getDimensionPixelOffset(R.dimen.x30)
         }
 
     }

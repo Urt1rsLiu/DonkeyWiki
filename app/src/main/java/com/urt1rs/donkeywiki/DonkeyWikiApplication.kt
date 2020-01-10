@@ -3,6 +3,7 @@ package com.urt1rs.donkeywiki
 import android.app.Application
 import android.content.Context
 import android.os.Bundle
+import com.urt1rs.donkeywiki.helper.PrefHelper
 
 class DonkeyWikiApplication : Application() {
 
@@ -12,9 +13,7 @@ class DonkeyWikiApplication : Application() {
     }
 
     companion object {
-
-        var appContext: Context? = null
-            private set
+        lateinit var appContext: Context
     }
 
 }

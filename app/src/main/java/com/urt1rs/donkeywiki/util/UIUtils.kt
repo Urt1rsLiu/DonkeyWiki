@@ -43,7 +43,7 @@ object UIUtils {
         activityDisplayMetrics.ydpi = xdpi
 
         //注： 有些手机Rom的Application和Activity的DisplayMetrics不是同一个对象, 需要都设置
-        val appDisplayMetrics = DonkeyWikiApplication.appContext?.resources?.displayMetrics
+        val appDisplayMetrics = DonkeyWikiApplication.appContext.resources?.displayMetrics
         appDisplayMetrics?.xdpi = xdpi
         appDisplayMetrics?.ydpi = xdpi
         return resources
